@@ -6,10 +6,10 @@ import Component1 from './app/components/Component1/Component1';
 export default class myapp extends Component {
   render() {
 
-    return(
-    <View>
-      <Component1 message='Hello World'/>
-    </View>
+    return (
+      <View>
+        <Component1 message='Hello World' />
+      </View>
     );
   }
 
