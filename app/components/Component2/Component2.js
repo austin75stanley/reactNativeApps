@@ -1,17 +1,26 @@
 
 import React, { Component } from 'react';
-import { AppRegistry, Text, View } from 'react-native';
+import { AppRegistry, Text, View, StyleSheet } from 'react-native';
 
 
 export default class Component2 extends Component {
-  render() {
+    render() {
 
-    return (
-      <View style={{backgroundColor:'black'}}>
-     <Text style={{color:'red'}}>hello Stanley</Text>   
-      </View>
-    );
-  }
+        return (
+            <View style={styles.myView}>
+                <Text style={styles.myText}>hello Stanley</Text>
+            </View>
+        );
+    }
 
 }
+const styles = StyleSheet.create({
+    myView: {
+        backgroundColor: 'blue'
+    },
+    myText: {
+        color: 'white'
+    }
+
+})
 AppRegistry.registerComponent('Component2', () => Component2);
