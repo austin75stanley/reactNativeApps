@@ -9,16 +9,17 @@ export default class Component1 extends Component {
     constructor(){
         super();
         this.state={
-            name:'Stanley'
+            name:'Stanley',
+            showName:false
         }
     }
     render() {
-
+  let name=this.state.showName?this.state.name:'no name'
 
         return (
             <View>
                 <Text>{this.props.message}</Text>
-                <Text>{this.state.name}</Text>
+                <Text>{name}</Text>
             </View>
         );
     }
