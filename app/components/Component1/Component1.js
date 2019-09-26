@@ -19,6 +19,7 @@ export default class Component1 extends Component {
     }
     render() {
         let name = this.state.showName ? this.state.name : 'no name'
+        console.log('Hello World');
 
         return (
             <View>
