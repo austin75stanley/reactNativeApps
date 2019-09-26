@@ -1,10 +1,13 @@
 
 import React, { Component } from 'react';
-import { AppRegistry, Text, View, StyleSheet,TouchableHighlight } from 'react-native';
+import { AppRegistry, Text, View, StyleSheet, TouchableHighlight, TouchableOpacity } from 'react-native';
 
 
 export default class Component2 extends Component {
-    onPress(){
+    onPress() {
+        console.log("Hello There");
+    }
+    onPress2() {
         console.log("Hello There");
     }
     render() {
@@ -16,14 +19,16 @@ export default class Component2 extends Component {
                 </View>
                 <View style={styles.container}>
                     <TouchableHighlight style={styles.v1} onPress={this.onPress} underlayColor="blue">
-                    <View>
-                        <Text>View 1</Text>
-                    </View>
+                        <View>
+                            <Text>View 1</Text>
+                        </View>
                     </TouchableHighlight>
-                   
-                    <View style={styles.v2}>
-                        <Text>View 2</Text>
-                    </View>
+                    <TouchableOpacity style={styles.v2} onPress2={this.onPress2}>
+                        <View >
+                            <Text>View 2</Text>
+                        </View>
+                    </TouchableOpacity>
+
                     <View style={styles.v3}>
                         <Text style={styles.vText}>View 3</Text>
                     </View>
