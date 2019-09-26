@@ -1,9 +1,12 @@
 
 import React, { Component } from 'react';
-import { AppRegistry, Text, View, StyleSheet } from 'react-native';
+import { AppRegistry, Text, View, StyleSheet,TouchableHighlight } from 'react-native';
 
 
 export default class Component2 extends Component {
+    onPress(){
+        console.log("Hello There");
+    }
     render() {
 
         return (
@@ -12,14 +15,17 @@ export default class Component2 extends Component {
                     <Text style={styles.myText}>hello Stanley</Text>
                 </View>
                 <View style={styles.container}>
-                    <View style={styles.v1}>
+                    <TouchableHighlight style={styles.v1} onPress={this.onPress} underlayColor="blue">
+                    <View>
                         <Text>View 1</Text>
                     </View>
+                    </TouchableHighlight>
+                   
                     <View style={styles.v2}>
                         <Text>View 2</Text>
                     </View>
                     <View style={styles.v3}>
-                        <Text>View 3</Text>
+                        <Text style={styles.vText}>View 3</Text>
                     </View>
                 </View>
             </View>
@@ -53,6 +59,11 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: 'yellow',
         padding: 10,
+
+    },
+    vText: {
+
+        color: 'red'
     },
 
 })
