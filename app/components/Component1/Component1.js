@@ -6,17 +6,19 @@ import { AppRegistry, Text, View } from 'react-native';
 
 
 export default class Component1 extends Component {
-    constructor(props){
+    constructor(props) {
         super(props);
-        this.state={
-            name:'Stanley',
-            showName:false,
-            message:this.props.message
+        this.state = {
+            name: 'Stanley',
+            showName: false,
+            message: this.props.message
         }
     }
-    
+    static defaultProps = {
+       message: 'Hi there'
+    }
     render() {
-  let name=this.state.showName?this.state.name:'no name'
+        let name = this.state.showName ? this.state.name : 'no name'
 
         return (
             <View>

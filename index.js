@@ -8,7 +8,7 @@ export default class myapp extends Component {
 
     return (
       <View>
-        <Component1 message='Hello World' />
+        <Component1  />
       </View>
     );
   }
