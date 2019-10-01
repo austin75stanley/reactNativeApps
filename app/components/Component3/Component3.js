@@ -35,7 +35,7 @@ export default class Component3 extends Component {
                     onChangeText={(value) => this.onChangeText(value)}
                     onSubmitEditing={this.onSubmit}
                 />
-                <Text>{this.state.textValue}</Text>
+                
                 <Switch
                     value={this.state.switchValue}
                     onValueChange={(value) => this.onSwitchChange(value)}
